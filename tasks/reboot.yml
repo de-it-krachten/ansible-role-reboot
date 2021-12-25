@@ -1,0 +1,7 @@
+---
+
+- name: Reboot the system
+  reboot:
+    reboot_timeout: 300
+  tags: molecule-notest
+  when: reboot_needed|bool or reboot_forced|bool

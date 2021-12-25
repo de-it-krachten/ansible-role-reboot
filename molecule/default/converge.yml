@@ -1,0 +1,10 @@
+---
+
+- name: Converge
+  hosts: all
+  vars:
+    reboot_forced: True
+  tasks:
+    - name: Include role 'ansible-role-reboot'
+      include_role:
+        name: ansible-role-reboot

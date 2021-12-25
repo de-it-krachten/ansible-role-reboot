@@ -1,0 +1,4 @@
+---
+
+- include_tasks: check.yml
+- include_tasks: reboot.yml

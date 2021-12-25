@@ -1,0 +1,7 @@
+---
+
+# Set default for the need of a reboot
+reboot_needed: false
+
+# Should a reboot be forced
+reboot_forced: false
