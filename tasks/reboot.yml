@@ -1,5 +1,10 @@
 ---
 
+- name: Show reboot message
+  debug:
+    msg: "The server needs to be rebooted"
+  when: reboot_needed|bool or reboot_forced|bool
+  
 - name: Reboot the system
   reboot:
     reboot_timeout: 300
