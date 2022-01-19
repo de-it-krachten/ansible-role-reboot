@@ -1,0 +1,8 @@
+generic:
+  role_description: |
+    Reboot a server
+    By default, only when reboot is pending but it can be forced
+molecule:
+  converge:
+    vars:
+      reboot_forced: true    
