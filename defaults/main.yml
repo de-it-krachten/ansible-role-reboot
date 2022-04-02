@@ -5,3 +5,6 @@ reboot_needed: false
 
 # Should a reboot be forced
 reboot_forced: false
+
+# Amount of seconds to wait for host to become active before trowing an error
+reboot_timeout: 300

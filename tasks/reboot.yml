@@ -7,6 +7,7 @@
   
 - name: Reboot the system
   reboot:
-    reboot_timeout: 300
+    reboot_timeout: >
+      {{ reboot_timeout|int }}
   tags: molecule-notest
   when: reboot_needed|bool or reboot_forced|bool
