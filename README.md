@@ -21,6 +21,7 @@ Supported platforms
 - Debian 11 (Bullseye)
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
+- Ubuntu 22.04 LTS
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -30,6 +31,9 @@ Role Variables
 <pre><code>
 # Set default for the need of a reboot
 reboot_needed: false
+
+# Should the reboot be postponed (and not be executed by this role)
+reboot_postponed: false
 
 # Should a reboot be forced
 reboot_forced: false
