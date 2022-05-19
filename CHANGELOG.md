@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.1.0...v1.2.0) (2022-05-19)
+
+
+### Features
+
+* add support for Ubuntu 22.04 ([f2a6c1a](https://github.com/de-it-krachten/ansible-role-reboot/commit/f2a6c1a2e61470ef46a1d3c3e4ef9c60cbd93680))
+* optional postpone of the reboot ([2df1e3b](https://github.com/de-it-krachten/ansible-role-reboot/commit/2df1e3b44b34c9b79ea57b39b524958dc0daf68a))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.0.0...v1.1.0) (2022-04-02)
 
 
