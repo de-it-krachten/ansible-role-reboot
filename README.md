@@ -31,6 +31,9 @@ Role Variables
 # Set default for the need of a reboot
 reboot_needed: false
 
+# Should the reboot be postponed (and not be executed by this role)
+reboot_postponed: false
+
 # Should a reboot be forced
 reboot_forced: false
 

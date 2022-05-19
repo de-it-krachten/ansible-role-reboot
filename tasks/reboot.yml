@@ -3,11 +3,13 @@
 - name: Show reboot message
   debug:
     msg: "The server needs to be rebooted"
-  when: reboot_needed|bool or reboot_forced|bool
+  when: reboot_needed|bool
   
 - name: Reboot the system
   reboot:
     reboot_timeout: >
       {{ reboot_timeout|int }}
   tags: molecule-notest
-  when: reboot_needed|bool or reboot_forced|bool
+  when:
+    - not reboot_postponed|bool
+    - reboot_needed|bool or reboot_forced|bool
