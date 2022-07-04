@@ -1,3 +1,5 @@
+---
+
 generic:
   role_description: |
     Reboot a server
@@ -7,6 +9,3 @@ molecule:
   converge:
     vars:
       reboot_forced: true
-
-github:
-  fail_fast: false
