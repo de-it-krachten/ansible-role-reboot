@@ -9,7 +9,7 @@
   reboot:
     reboot_timeout: >
       {{ reboot_timeout|int }}
-  tags: molecule-notest
   when:
+    - ansible_virtualization_type not in [ 'docker', 'container', 'containerd' ]
     - not reboot_postponed|bool
     - reboot_needed|bool or reboot_forced|bool
