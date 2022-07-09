@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.2.0...v1.2.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* only skip reboot on containers, not all molecule testing (like vagrant/virtualbox) ([ff3dbf8](https://github.com/de-it-krachten/ansible-role-reboot/commit/ff3dbf83f2b7825fd3c8d7c80fd21282d27a1fe1))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.1.0...v1.2.0) (2022-05-19)
 
 
