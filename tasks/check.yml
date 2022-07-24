@@ -1,6 +1,7 @@
 ---
 
-- block:
+- name: family RedHat
+  block:
 
     - name: Install required package (RedHat)
       yum:
@@ -21,7 +22,8 @@
 
   when: ansible_os_family == 'RedHat'
 
-- block:
+- name: family Debian
+  block:
 
     - name: Test for Debian reboot file presence (Debian)
       stat:
