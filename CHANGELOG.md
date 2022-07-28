@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.2.1...v1.3.0) (2022-07-28)
+
+
+### Features
+
+* Implement ansible-lint v6 support ([2eba7f7](https://github.com/de-it-krachten/ansible-role-reboot/commit/2eba7f7a7ea2117ea33d1c7c3e24ac34561ab941))
+
 ## [1.2.1](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.2.0...v1.2.1) (2022-07-09)
 
 
