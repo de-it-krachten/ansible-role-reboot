@@ -2,5 +2,6 @@
 
 - name: Include check.yml
   ansible.builtin.include_tasks: check.yml
+
 - name: Include reboot.yml
   ansible.builtin.include_tasks: reboot.yml

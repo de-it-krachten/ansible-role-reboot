@@ -1,5 +1,22 @@
 ---
 
+- name: Fix issue on github runner
+  when: ansible_virtualization_type == 'VirtualPC'
+  block:
+
+    - name: Get molecule driver
+      ansible.builtin.set_fact:
+        molecule_driver: "{{ lookup('env', 'MOLECULE_DRIVER_NAME') }}"
+
+    - name: Redefine virtualization type
+      ansible.builtin.set_fact:
+        ansible_virtualization_type: 'docker'
+      when: molecule_driver | length > 0 and molecule_driver == 'docker'
+
+    - name: Show virtualization type
+      ansible.builtin.debug:
+        var: ansible_virtualization_type
+
 - name: Show reboot message
   ansible.builtin.debug:
     msg: "The server needs to be rebooted"

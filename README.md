@@ -7,6 +7,15 @@ Reboot a server
 By default, only when reboot is pending but it can be forced
 
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
+
 ## Platforms
 
 Supported platforms
@@ -49,6 +58,7 @@ reboot_timeout: 300
 
 
 
+
 ## Example Playbook
 ### molecule/default/converge.yml
 <pre><code>
@@ -59,6 +69,6 @@ reboot_timeout: 300
     reboot_forced: True
   tasks:
     - name: Include role 'reboot'
-      include_role:
+      ansible.builtin.include_role:
         name: reboot
 </pre></code>
