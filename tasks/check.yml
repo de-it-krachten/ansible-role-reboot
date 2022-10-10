@@ -1,38 +1,36 @@
 ---
 
-- name: family RedHat
+- name: Family RedHat
+  when: ansible_os_family == 'RedHat'
   block:
 
     - name: Install required package (RedHat)
-      yum:
+      ansible.builtin.yum:
         name: yum-utils
         state: present
 
     - name: Execute check for pending restart (RedHat)
-      command: needs-restarting -r
+      ansible.builtin.command: needs-restarting -r
       check_mode: no
-      changed_when: False
+      changed_when: false
       failed_when: restart_required.rc > 1
       register: restart_required
 
     - name: Flip the boolean if needed (RedHat)
-      set_fact:
-        reboot_needed: True
+      ansible.builtin.set_fact:
+        reboot_needed: true
       when: restart_required.rc == 1
 
-  when: ansible_os_family == 'RedHat'
-
-- name: family Debian
+- name: Family Debian
+  when: ansible_os_family == 'Debian'
   block:
 
     - name: Test for Debian reboot file presence (Debian)
-      stat:
+      ansible.builtin.stat:
         path: /var/run/reboot-required
       register: restart_required
 
     - name: Flip the boolean if needed (Debian)
-      set_fact:
-        reboot_needed: True
+      ansible.builtin.set_fact:
+        reboot_needed: true
       when: restart_required.stat.exists
-
-  when: ansible_os_family == 'Debian'
