@@ -1,4 +1,24 @@
 ---
 
-- include_tasks: check.yml
-- include_tasks: reboot.yml
+- name: Fix issue on github runner
+  when: ansible_virtualization_type == 'VirtualPC'
+  block:
+
+    - name: Get molecule driver
+      ansible.builtin.set_fact:
+        molecule_driver: "{{ lookup('env', 'MOLECULE_DRIVER_NAME') }}"
+
+    - name: Redefine virtualization type
+      ansible.builtin.set_fact:
+        ansible_virtualization_type: 'docker'
+      when: molecule_driver | length > 0 and molecule_driver == 'docker'
+
+    - name: Show virtualization type
+      ansible.builtin.debug:
+        var: ansible_virtualization_type
+
+- name: Include check.yml
+  ansible.builtin.include_tasks: check.yml
+
+- name: Include reboot.yml
+  ansible.builtin.include_tasks: reboot.yml
