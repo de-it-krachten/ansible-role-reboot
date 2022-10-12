@@ -1,15 +1,15 @@
 ---
 
 - name: Show reboot message
-  debug:
+  ansible.builtin.debug:
     msg: "The server needs to be rebooted"
-  when: reboot_needed|bool
-  
+  when: reboot_needed | bool
+
 - name: Reboot the system
-  reboot:
+  ansible.builtin.reboot:
     reboot_timeout: >
-      {{ reboot_timeout|int }}
+      {{ reboot_timeout | int }}
   when:
     - ansible_virtualization_type not in [ 'docker', 'container', 'containerd' ]
-    - not reboot_postponed|bool
-    - reboot_needed|bool or reboot_forced|bool
+    - not reboot_postponed | bool
+    - reboot_needed | bool or reboot_forced | bool
