@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.3.0...v1.4.0) (2022-10-12)
+
+
+### Features
+
+* Move to FQCN ([e4f29a5](https://github.com/de-it-krachten/ansible-role-reboot/commit/e4f29a5054a2fd3ba48a793eacafc2a3edcf1812))
+* Update CI to latest standards ([eb6e060](https://github.com/de-it-krachten/ansible-role-reboot/commit/eb6e060e4c886f7a493338a509d689200cba3325))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.2.1...v1.3.0) (2022-07-28)
 
 
