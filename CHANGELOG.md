@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.4.0...v1.5.0) (2023-08-14)
+
+
+### Features
+
+* Update supported platforms & CI ([5a12082](https://github.com/de-it-krachten/ansible-role-reboot/commit/5a120827ea0eae8132991374024dea4aa5ab3512))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.3.0...v1.4.0) (2022-10-12)
 
 
