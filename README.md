@@ -14,7 +14,7 @@ By default, only when reboot is pending but it can be forced
 None
 
 #### Collections
-- community.general
+None
 
 ## Platforms
 
@@ -32,7 +32,6 @@ Supported platforms
 - AlmaLinux 9
 - SUSE Linux Enterprise 15<sup>1</sup>
 - openSUSE Leap 15
-- Debian 10 (Buster)<sup>1</sup>
 - Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Ubuntu 20.04 LTS
@@ -67,9 +66,9 @@ reboot_timeout: 300
 <pre><code>
 - name: sample playbook for role 'reboot'
   hosts: all
-  become: "yes"
+  become: 'yes'
   vars:
-    reboot_forced: True
+    reboot_forced: true
   tasks:
     - name: Include role 'reboot'
       ansible.builtin.include_role:
