@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.5.0...v1.5.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* Show reboot message in all cases ([53404d1](https://github.com/de-it-krachten/ansible-role-reboot/commit/53404d1af0a63289e22fa68a8618623de251af44))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.4.0...v1.5.0) (2023-08-14)
 
 
