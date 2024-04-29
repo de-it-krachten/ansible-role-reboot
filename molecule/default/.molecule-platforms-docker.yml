@@ -184,6 +184,22 @@
   cgroupns_mode: host
   volumes:
     - /sys/fs/cgroup:/sys/fs/cgroup:rw
+- name: fedora39
+  ci: false
+  image: docker.io/geerlingguy/docker-fedora39-ansible:latest
+  privileged: true
+  pre_build_image: true
+  cgroupns_mode: host
+  volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:rw
+- name: fedora40
+  ci: false
+  image: docker.io/geerlingguy/docker-fedora40-ansible:latest
+  privileged: true
+  pre_build_image: true
+  cgroupns_mode: host
+  volumes:
+    - /sys/fs/cgroup:/sys/fs/cgroup:rw
 - name: alpine3
   ci: false
   image: docker.io/dropveter/alpine-python3

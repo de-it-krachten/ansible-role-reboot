@@ -56,6 +56,9 @@ reboot_forced: false
 
 # Amount of seconds to wait for host to become active before throwing an error
 reboot_timeout: 300
+
+# Reboot in async mode
+reboot_async: false
 </pre></code>
 
 
