@@ -3,11 +3,11 @@
 - name: Show reboot message
   ansible.builtin.debug:
     msg: >-
-      {% if reboot_needed | bool %}
+      {%- if reboot_needed | bool -%}
       The server needs to be rebooted.
-      {% else %}
+      {%- else -%}
       No need to reboot the server.
-      {% endif %}
+      {%- endif -%}
 
 - name: Reboot the system
   ansible.builtin.reboot:
