@@ -1,6 +1,6 @@
 ---
 
-- name: Show reboot message
+- name: Show reboot message  # noqa jinja[spacing]
   ansible.builtin.debug:
     msg: >-
       {%- if reboot_needed | bool -%}
@@ -18,8 +18,9 @@
   block:
 
     - name: Reboot the system
-      ansible.builtin.shell:
+      ansible.builtin.command:
         cmd: reboot
+      changed_when: yes
       async: 1
       poll: 0
 
