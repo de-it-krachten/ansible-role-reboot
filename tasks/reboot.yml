@@ -1,19 +1,44 @@
 ---
 
-- name: Show reboot message
+- name: Show reboot message  # noqa jinja[spacing]
   ansible.builtin.debug:
     msg: >-
-      {% if reboot_needed | bool %}
+      {%- if reboot_needed | bool -%}
       The server needs to be rebooted.
-      {% else %}
+      {%- else -%}
       No need to reboot the server.
-      {% endif %}
+      {%- endif -%}
 
-- name: Reboot the system
-  ansible.builtin.reboot:
-    reboot_timeout: >
-      {{ reboot_timeout | int }}
+- name: Execute reboot (async)
   when:
     - ansible_virtualization_type not in [ 'docker', 'container', 'containerd' ]
     - not reboot_postponed | bool
     - reboot_needed | bool or reboot_forced | bool
+    - reboot_async | bool
+  block:
+
+    - name: Reboot the system
+      ansible.builtin.command:
+        cmd: reboot
+      changed_when: yes
+      async: 1
+      poll: 0
+
+    - name: Wait for the reboot to complete if there was a change.
+      ansible.builtin.wait_for_connection:
+        connect_timeout: 10
+        sleep: 5
+        delay: 5
+        timeout: "{{ reboot_timeout | int }}"
+
+- name: Execute reboot (non-async)
+  when:
+    - ansible_virtualization_type not in [ 'docker', 'container', 'containerd' ]
+    - not reboot_postponed | bool
+    - reboot_needed | bool or reboot_forced | bool
+    - not reboot_async | bool
+  block:
+
+    - name: Reboot the system
+      ansible.builtin.reboot:
+        reboot_timeout: "{{ reboot_timeout | int }}"
