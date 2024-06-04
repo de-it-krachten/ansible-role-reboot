@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.5.1...v1.6.0) (2024-06-04)
+
+
+### Features
+
+* Add async reboot mode ([6f29e3b](https://github.com/de-it-krachten/ansible-role-reboot/commit/6f29e3b27558d64d1de2cd4119ffb5cb13f0a958))
+* Add support for Ubuntu 24.04 LTS + Fedora 40 ([0b8ec61](https://github.com/de-it-krachten/ansible-role-reboot/commit/0b8ec611b2cace4ebce17100c0d4c96aff268d98))
+
 ## [1.5.1](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.5.0...v1.5.1) (2024-04-12)
 
 
