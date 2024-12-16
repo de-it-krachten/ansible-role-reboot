@@ -14,3 +14,6 @@ reboot_timeout: 300
 
 # Reboot in async mode
 reboot_async: false
+
+# Port to check for in async mode
+reboot_port_check: 22

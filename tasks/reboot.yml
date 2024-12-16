@@ -24,12 +24,14 @@
       async: 1
       poll: 0
 
-    - name: Wait for the reboot to complete if there was a change.
-      ansible.builtin.wait_for_connection:
-        connect_timeout: 10
-        sleep: 5
-        delay: 5
-        timeout: "{{ reboot_timeout | int }}"
+    - name: Wait remote system to be back
+      ansible.builtin.wait_for:
+        host: "{{ ansible_host | default(inventory_hostname) }}"
+        port: "{{ reboot_port_check | int }}"
+        state: started
+        delay: 10
+        timeout: 300
+      delegate_to: localhost
 
 - name: Execute reboot (non-async)
   when:
