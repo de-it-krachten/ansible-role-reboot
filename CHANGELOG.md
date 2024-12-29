@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.6.0...v1.7.0) (2024-12-29)
+
+
+### Bug Fixes
+
+* Fix for async reboot ([00a3ba4](https://github.com/de-it-krachten/ansible-role-reboot/commit/00a3ba4aa09317a3d46e3cc960f4549922c4756e))
+
+
+### Features
+
+* Update supported platforms & CI ([b908385](https://github.com/de-it-krachten/ansible-role-reboot/commit/b9083859f2ddc746fc004ee214ed857bc079f9a6))
+
 # [1.6.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.5.1...v1.6.0) (2024-06-04)
 
 
