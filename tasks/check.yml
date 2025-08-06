@@ -5,7 +5,7 @@
   block:
 
     - name: Install required package (RedHat)
-      ansible.builtin.yum:
+      ansible.builtin.dnf:
         name: yum-utils
         state: present
 
