@@ -1,3 +1,14 @@
+# [1.8.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.7.0...v1.8.0) (2025-08-07)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([5c787f1](https://github.com/de-it-krachten/ansible-role-reboot/commit/5c787f19fda87eb8509311c7528be278e799dd5e))
+* Add support for Debian 13 (Trixie) ([6bb36f9](https://github.com/de-it-krachten/ansible-role-reboot/commit/6bb36f93506c4cb32ba98e2379f9a0ab3669cfc9))
+* Add support for OracleLinux 10 ([e6d328d](https://github.com/de-it-krachten/ansible-role-reboot/commit/e6d328de8eb22432edaa91566988426879c8bd85))
+* Add support for Red Hat Enterprise Linux 10 ([6aa6c86](https://github.com/de-it-krachten/ansible-role-reboot/commit/6aa6c86a310e35a1aeb701cbb7796e51ed61dbf3))
+* Add support for RockyLinux 10 ([fdd32bd](https://github.com/de-it-krachten/ansible-role-reboot/commit/fdd32bdb56ee98165552edc8176d8bed9586a566))
+
 # [1.7.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.6.0...v1.7.0) (2024-12-29)
 
 
