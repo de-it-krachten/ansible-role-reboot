@@ -1,3 +1,13 @@
+# [1.9.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.8.0...v1.9.0) (2026-03-15)
+
+
+### Features
+
+* Added support for Fedora 43 ([60c78bc](https://github.com/de-it-krachten/ansible-role-reboot/commit/60c78bcf4a89f1bc31a0a25fa25c486dbe86473c))
+* Drop support for Fedora 41 ([cfc8e3f](https://github.com/de-it-krachten/ansible-role-reboot/commit/cfc8e3fa7f786ac9f9e81f4285c0769e40d5da51))
+* Drop support for openSUSE Leap 15 ([81f98c5](https://github.com/de-it-krachten/ansible-role-reboot/commit/81f98c5c5d74e40ca2c1acf3ca625cfc13957ac6))
+* Drop support for SUSE Linux Enterprise 15 ([4faa47d](https://github.com/de-it-krachten/ansible-role-reboot/commit/4faa47d4cd46bc5f27984d46c883ce1ee0e8f7f6))
+
 # [1.8.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.7.0...v1.8.0) (2025-08-07)
 
 
