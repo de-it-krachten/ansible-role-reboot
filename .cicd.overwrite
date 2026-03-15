@@ -5,6 +5,12 @@ generic:
     Reboot a server
     By default, only when reboot is pending but it can be forced
 
+# Supported platforms
+platforms:
+  ubuntu2004:
+    supported: true
+    ci: true
+
 molecule:
   converge:
     vars:
