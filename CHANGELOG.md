@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.9.0...v1.10.0) (2026-05-10)
+
+
+### Bug Fixes
+
+* No need to become=true for local actions ([ccdf8ff](https://github.com/de-it-krachten/ansible-role-reboot/commit/ccdf8ffbc6450b2aefab922ee0c028042ab05e75))
+
+
+### Features
+
+* Added support for Ubuntu 26.04 LTS ([b23e9df](https://github.com/de-it-krachten/ansible-role-reboot/commit/b23e9dfa08fb85ee5dc214406a799d32d8a8d708))
+
 # [1.9.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.8.0...v1.9.0) (2026-03-15)
 
 
