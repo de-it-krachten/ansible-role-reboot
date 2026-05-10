@@ -31,6 +31,7 @@
         state: started
         delay: 10
         timeout: 300
+      become: false
       delegate_to: localhost
 
 - name: Execute reboot (non-async)
