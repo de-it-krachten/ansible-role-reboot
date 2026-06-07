@@ -1,7 +1,7 @@
 ---
 
 - name: Fix issue on github runner
-  when: ansible_virtualization_type == 'VirtualPC'
+  when: ansible_facts.virtualization_type == 'VirtualPC'
   block:
 
     - name: Get molecule driver
@@ -10,12 +10,12 @@
 
     - name: Redefine virtualization type
       ansible.builtin.set_fact:
-        ansible_virtualization_type: 'docker'
+        ansible_facts.virtualization_type: 'docker'
       when: molecule_driver | length > 0 and molecule_driver == 'docker'
 
     - name: Show virtualization type
       ansible.builtin.debug:
-        var: ansible_virtualization_type
+        var: ansible_facts.virtualization_type
 
 - name: Include check.yml
   ansible.builtin.include_tasks: check.yml

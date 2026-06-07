@@ -11,7 +11,7 @@
 
 - name: Execute reboot (async)
   when:
-    - ansible_virtualization_type not in [ 'docker', 'container', 'containerd' ]
+    - ansible_facts.virtualization_type not in [ 'docker', 'container', 'containerd' ]
     - not reboot_postponed | bool
     - reboot_needed | bool or reboot_forced | bool
     - reboot_async | bool
@@ -36,7 +36,7 @@
 
 - name: Execute reboot (non-async)
   when:
-    - ansible_virtualization_type not in [ 'docker', 'container', 'containerd' ]
+    - ansible_facts.virtualization_type not in [ 'docker', 'container', 'containerd' ]
     - not reboot_postponed | bool
     - reboot_needed | bool or reboot_forced | bool
     - not reboot_async | bool
