@@ -1,7 +1,7 @@
 ---
 
 - name: Family RedHat
-  when: ansible_os_family == 'RedHat'
+  when: ansible_facts.os_family == 'RedHat'
   block:
 
     - name: Install required package (RedHat)
@@ -22,7 +22,7 @@
       when: restart_required.rc == 1
 
 - name: Family Debian
-  when: ansible_os_family == 'Debian'
+  when: ansible_facts.os_family == 'Debian'
   block:
 
     - name: Test for Debian reboot file presence (Debian)
