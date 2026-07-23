@@ -10,7 +10,7 @@
 
     - name: Redefine virtualization type
       ansible.builtin.set_fact:
-        ansible_facts.virtualization_type: 'docker'
+        ansible_facts: "{{ ansible_facts | combine({'virtualization_type': 'docker'}) }}"
       when: molecule_driver | length > 0 and molecule_driver == 'docker'
 
     - name: Show virtualization type
