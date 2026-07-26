@@ -1,3 +1,12 @@
+# [1.11.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.10.0...v1.11.0) (2026-07-26)
+
+
+### Features
+
+* Add support for ansible-core 2.20+ ([952aa58](https://github.com/de-it-krachten/ansible-role-reboot/commit/952aa58fd4c0e141ca9d4ea5e3386b0f92aaeb5b))
+* Added support for Fedora 44 ([9b989f8](https://github.com/de-it-krachten/ansible-role-reboot/commit/9b989f8a2ce564012794d7aca58ffe419b24a0e1))
+* Drop support for Fedora 42 ([7d4f821](https://github.com/de-it-krachten/ansible-role-reboot/commit/7d4f8214c1e69153430ee5b3d25e794583cd62ee))
+
 # [1.10.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.9.0...v1.10.0) (2026-05-10)
 
 
