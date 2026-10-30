@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.11.0...v1.12.0) (2026-10-30)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([1059635](https://github.com/de-it-krachten/ansible-role-reboot/commit/105963509519d09e45a2305e45f74cd036e00ff4))
+
 # [1.11.0](https://github.com/de-it-krachten/ansible-role-reboot/compare/v1.10.0...v1.11.0) (2026-07-26)
 
 
